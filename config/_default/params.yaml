@@ -72,7 +72,7 @@ features:
   privacy_pack:
     enable: false
   repository:
-    url: 'https://github.com/nballou/nickballousite'
+    url: 'https://github.com/PrathikVijaykumar/blog'
     content_dir: content
     branch: master
   avatar:
