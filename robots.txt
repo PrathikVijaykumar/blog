@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://Prathikvijaykumar.github.io/sitemap.xml
