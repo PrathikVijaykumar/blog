@@ -87,6 +87,8 @@
   z-index: -1; // Place bg div behind content.
 }
 
+
+
 /* Default background image properties for home sections. */
 .home-section-bg.bg-image {
   background-position: center;
@@ -220,4 +222,10 @@
 .course .card-subtitle a:hover {
   border-bottom: solid 1px;
   text-decoration: none;
+}
+
+.widget-title {
+  text-align: center;
+  color: red;
+
 }

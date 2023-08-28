@@ -16,13 +16,13 @@ content:
   autolink: true
 
   # Contact details (edit or remove options as required)
-  email: nick@nickballou.com
-  phone: +44 7367 525567
+  email: sshakkot@tamu.edu
+  phone: +1-979-458-0094
   contact_links:
-    - icon: twitter
-      icon_pack: fab
-      name: Twitter (DMs open)
-      link: 'https://twitter.com/nbballou'
+    # - icon: twitter
+    #   icon_pack: fab
+    #   name: Twitter (DMs open)
+    #   link: 'https://twitter.com/nbballou'
 
 design:
   columns: '2'

@@ -43,7 +43,7 @@ header:
 
 footer:
   copyright:
-    notice: '© {year} Nick Ballou. This work is licensed under {license}.'
+    notice: '© 2016 - {year} The Computer Engineering and Systems Group (CESG) Department of Electrical and Computer Engineering. This work is licensed under {license}.'
     license:
       enable: true
       allow_derivatives: true

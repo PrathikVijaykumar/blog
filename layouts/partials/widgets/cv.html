@@ -14,49 +14,30 @@
   {{ errorf "Could not find an author page at `%s`. Please check the value of `author` in your About widget and create an associated author page if one does not already exist. See https://wowchemy.com/docs/page-builder/#about " $person_page_path }}
 {{end}}
 {{ $person := $person_page.Params }}
-{{ $avatar := ($person_page.Resources.ByType "image").GetMatch "*avatar*" }}
+{{ $avatar := ($person_page.Resources.ByType "image").GetMatch "*lens*" }}
 {{ $avatar_shape := site.Params.features.avatar.shape | default "circle" }}
 
 <!-- About widget -->
 <div class="row">
   <div class="col-12 col-lg-4">
-        {{/* Only display widget title in explicit instances of about widget, not in author pages. */}}
-    {{ if and $page.Params.widget $page.Title }}<h1>{{ $page.Title | markdownify | emojify }}</h1>{{ end }}
+
+    <div class="widget-title">
+      {{/* Only display widget title in explicit instances of about widget, not in author pages. */}}
+  {{ if and $page.Params.widget $page.Title }}<h1>{{ $page.Title | markdownify | emojify }}</h1>{{ end }}
+     </div>
   </div>
   <div class="col-12 col-lg-8">
 
-    <div class="row">
+    {{ with $person.interests }}
+    <p style="font-size: 24px;">{{ . | markdownify | emojify }}</p>
+    {{ end }}
 
-      {{ with $person.interests }}
-      <div class="col-md-5">
-        <div class="section-subheading">{{ i18n "interests" | markdownify }}</div>
-        <ul class="ul-interests mb-0">
-          {{ range . }}
-          <li>{{ . | markdownify | emojify }}</li>
-          {{ end }}
-        </ul>
-      </div>
-      {{ end }}
-      
-
-      {{ with $person.education }}
-      <div class="col-md-7">
-        <div class="section-subheading">{{ i18n "education" | markdownify }}</div>
-        <ul class="ul-edu fa-ul mb-0">
-          {{ range .courses }}
-          <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
-            <div class="description">
-              <p class="course">{{ .course }}</p>
-              <p class="institution">{{ .institution }}</p>
-              <p class="institution">{{ .year }}</p>
-            </div>
-          </li>
-          {{ end }}
-        </ul>
-      </div>
-      {{ end }}
-
-    </div>
+    {{ $avatar_image := $avatar.Fill "897x251" }}
+    <img width="{{ $avatar_image.Width }}" height="{{ $avatar_image.Height }}"
+           src="{{ $avatar_image.RelPermalink }}" alt="robot in lab">
+    
+    <p style="font-size: 24px;">The lab is supported through the sponsorship of several organizations including Department of Electrical and Computer Engineering at Texas A&M University, National Instruments, Google, the National Science Foundation, and The US Army Futures Command, among others.</p>
+  
+       
   </div>
 </div>

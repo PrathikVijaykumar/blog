@@ -16,7 +16,9 @@ title:
 
 # [design.spacing]
 # Customize the section spacing. Order is top, right, bottom, left.
-css_style: "padding-top: 20px; padding-bottom: 20px;"
+#css_style: "padding-top: 10px; padding-bottom: 10px;"
+css_style: "padding-top: 0px; padding-bottom: 0px; max-width: 800px; margin: 0 auto;"
+
 
 # design:
 #   background:

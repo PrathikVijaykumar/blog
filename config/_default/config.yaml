@@ -4,7 +4,7 @@ theme: "starter-hugo-academic"
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: Nick Ballou # Website name
+title: Lens Lab # Website name
 baseURL: 'https://nickballou.com/' # Website URL
 
 ############################

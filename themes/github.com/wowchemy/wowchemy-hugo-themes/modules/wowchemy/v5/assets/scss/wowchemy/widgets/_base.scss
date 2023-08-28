@@ -87,8 +87,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%; // Or fill-available when supported.
-  width: 100%; // Or fill-available when supported.
+  height: 50%; // Or fill-available when supported.
+  width: 50%; // Or fill-available when supported.
   z-index: -1; // Place bg div behind content.
 }
 
